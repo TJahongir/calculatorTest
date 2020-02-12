@@ -20,6 +20,7 @@ let operator;
 const clearAll = () => {
   upperValue.textContent = '';
   lowerValue.textContent = '';
+  operator.textContent = '';
 };
 
 const numAppend = num => {
@@ -83,7 +84,7 @@ numbersBtns.forEach(btn => {
 
 operationBtns.forEach(btn => {
   btn.addEventListener('click', () => {
-    if (operator != '') {
+    if (operator != '' && upperValue.textContent != '') {
       equals(operator);
     }
     operator = btn.textContent;

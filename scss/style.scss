@@ -77,8 +77,9 @@ body {
       &-lower {
         font-size: 3rem;
         font-weight: bold;
-        word-wrap: wrap;
-        word-break: break;
+        width: 100%;
+        word-wrap: break-word;
+        text-align: right;
       }
     }
   }
