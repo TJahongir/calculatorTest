@@ -83,15 +83,12 @@ numbersBtns.forEach(btn => {
 
 operationBtns.forEach(btn => {
   btn.addEventListener('click', () => {
-    operator = btn.textContent;
-    if (upperValue.textContent != '') {
+    if (operator != '') {
       equals(operator);
-      upperValue.textContent = lowerValue.textContent + ' ' + operator;
-      lowerValue.textContent = '';
-    } else {
-      upperValue.textContent = `${lowerValue.textContent} ${btn.textContent}`;
-      lowerValue.textContent = '';
     }
+    operator = btn.textContent;
+    upperValue.textContent = `${lowerValue.textContent} ${btn.textContent}`;
+    lowerValue.textContent = '';
   });
 });
 
